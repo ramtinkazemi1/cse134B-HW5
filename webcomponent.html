@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Components #1</title>
+    <style>
+​
+        :root {
+            --button-count-color : red;
+        }
+
+        button-count:not(:defined) {
+            display : none;
+        }
+    </style>
+</head>
+<body>
+​
+​
+<h1>Ahoy Custom Elements Below</h1>
+<hr>
+​
+<!-- what happens with no JS? -->
+<button-count><b>Where did this go?</b></button-count>
+​
+<script type="module">
+    class ButtonCount extends HTMLElement {
+​
+        // <style> output {color: red;} button {background: green;} </style>
+        constructor() {
+            super();
+​
+            // multiple ways we could do things from direct DOM methods here, to template tags you clone, to template strings you instantiate - all have their place, but this is direct and easy
+​
+            // Create a button element
+            let btn = document.createElement('button');
+            btn.innerHTML = 'Times Clicked : ';
+​
+​
+            // Idea: replace the setting above of the string with the slot text
+            // then if we could just extend the button we could probably drop that too
+​
+            // Create an output to hold the count
+            let count = document.createElement('output');
+​
+            count.textContent = 0;
+​
+            btn.append(count);
+​
+            // add the slot in
+            let slot = document.createElement('slot');
+            btn.append(slot);
+​
+            // Update the count when the button is clicked
+            btn.addEventListener('click', () => {
+                let currVal = Number(count.textContent);
+                count.textContent = currVal + 1;
+            });
+​
+            // Attach and open up shadow tree and add the button to it
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.append(btn);
+        }
+    }
+​
+    // Define the custom element in the registry
+    customElements.define('button-count', ButtonCount);
+</script>
+</body>
+</html>
