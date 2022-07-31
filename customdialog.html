@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW4 part 2</title>
+    <script type="text/javascript" src="DOMPurify-main/dist/purify.js"></script>
+    <script type="module" src="/customdialog.js"></script>
+</head>
+<body>
+    <h1>Custom Dialogs</h1>
+    <br>
+    <button id="alertBtn" >Alert</button>
+    <button id="confirmBtn" >Confirm</button>
+    <button id="promptBtn">Prompt</button>
+    <button id="saferPromptBtn">Safer Prompt</button>
+    <hr>
+    <output id="output1"></output>
+    <output id="output2"></output>
+    <output id="output3"></output>
+
+    <dialog id="alertDialog">
+        <table>
+            <tr>
+                <td style="text-align: center;">Alert is here!</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><button id="button1">OK</button></td>
+            </tr>
+        </table>
+    </dialog>
+
+    <dialog id="confirmDialog">
+        <table>
+            <tr>
+                <td style="text-align: center;">Do you confirm this?</td>
+            </tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr>
+                <td style="text-align: right;"><button id="confirmOKBtn">OK</button> <button id="confirmCancelBtn">Cancel</button></td>
+            </tr>
+        </table>
+    </dialog>
+
+    <dialog id="promptDialog">
+        <table>
+            <tr>
+                <td><label for="promptInput">What is your name?</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="promptInput" name="promptInput"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><button id="promptOKBtn">OK</button> <button id="promptCancelBtn">Cancel</button></td>
+            </tr>
+        </table>
+    </dialog>
+
+    <dialog id="saferPromptDialog">
+        <table>
+            <tr>
+                <td><label for="saferPromptInput">What is your name?</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="saferPromptInput" name="saferPromptInput"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><button id="saferPromptOKBtn">OK</button> <button id="saferPromptCancelBtn">Cancel</button></td>
+            </tr>
+        </table>
+    </dialog>
+</body>
+</html>

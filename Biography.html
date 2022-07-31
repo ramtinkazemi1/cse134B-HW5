@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <title>person's Bio</title>
+
+</head>
+
+<style>
+    body{
+        background-color: rgba(0, 0, 0, 0.377);
+    }
+    header{
+        background-color: rgba(245, 245, 220, 0.189);
+        border: 2px solid #000;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 20px;
+        width: 100%;
+    }
+
+    #upperLeftBox{
+        box-sizing: border-box;
+        display: grid;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        background-color: transparent;
+        font-family: fantasy;
+        width: fit-content;
+        padding: 3px;
+        font-size: 15px;
+        width: 25%;
+        position: absolute;
+        right:55%;
+        top: 200px;
+    }
+
+    #bottomLeftBox{
+        box-sizing: border-box;
+        display: grid;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        background-color: transparent;
+        font-family: fantasy;
+        width: fit-content;
+        padding: 3px;
+        font-size: 15px;
+        width: 25%;
+        position: absolute;
+        right: 55%;
+        top: 550px;
+    }
+
+    #upperRightBox{
+        box-sizing: border-box;
+        display: grid;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        background-color: transparent;
+        font-family: fantasy;
+        width: fit-content;
+        padding: 3px;
+        font-size: 15px;
+        width: 25%;
+        position: absolute;
+        right: 10px;
+        left: 55%;
+        top: 200px;
+    }
+
+    #bottomRightBox{
+        box-sizing: border-box;
+        display: grid;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        background-color: transparent;
+        font-family: fantasy;
+        width: fit-content;
+        padding: 3px;
+        font-size: 15px;
+        width: 25%;
+        position: absolute;
+        right: 1%;
+        left: 55%;
+        top: 550px;
+    }
+
+    .gridBox :hover{
+        background-color: rgba(255, 255, 255, 0.315);
+    }
+
+    #soccer{
+        box-sizing: border-box;
+        display: grid;
+        left: 50%;
+    }
+
+</style>
+
+<body>
+    <header>
+        <center><h1><span style="color:rgb(213, 32, 32);font-weight:bold">person</span>'s
+             <em>Biography</em> and <em>Skills</em></h1></center>
+    </header>
+
+    <main>
+    <div style="width:100%">
+        <p>In this page you'll read more about who person is and what skills 
+            does he have as well as you get to get more familiar with person
+            and his goalsIn this page you'll read more about who person is 
+            and what skills 
+            does he have as well as you get to get more familiar with person
+            and his goals as you get to get more familiar with person
+            and his goals</p>
+    </div><br><br><br>
+
+
+    <div class="gridBox" id="upperLeftBox">
+        <center><h3>Bio</h3></center>
+        <p id="bioParagraph">Aspiring software engineer with more than 3 years of experience in programming within
+             various languages and frameworks. Interested in software development and possess a
+              spectrum of experience in agile methodology, software principles, data structures,
+              and algorithms. Can undertake difficult mandates and meet tight deadlines as did in
+              my past experiences.</p><br><br>
+        </div>
+
+
+    <div class="gridBox" id="upperRightBox">
+        <center><h3>Motivations</h3></center>
+        <ul>
+            <li>Promotion</li>
+            <li>User needs</li>
+            <li>Growth</li>
+            <li>Power</li>
+        </ul>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <hr><center><canvas id="myCanvas" width="230" height="70" style="border:2px solid #c75b5b;"> update your browser pls</canvas></center><br>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("My Favorites :)",10,50);
+    </script><br>
+
+    <section>
+        <h3>my favorite song and its video...</h3><br>
+        <audio controls>
+            <source src="Media/iywas.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio><br/>
+    </section>
+
+    <section>
+        <iframe style="left: 50%;" width="420" height="315"src="https://www.youtube.com/embed/DWpr7pte4NU">
+        </iframe>
+    </section>
+
+    <div id="personalityBox">
+        <section>
+            <h2>Personality</h2>
+            <ol>
+                <li>Self Motivated</li>
+                <li>Hard Worker</li>
+                <li>Problem Solver</li>
+                <li>Good Time Manager</li>
+              </ol>
+        </section>
+
+    </div>
+    <br>
+
+    <div class="gridBox" id="bottomRightBox">
+        <center><h2>Goals</h2></center>
+        <p>other info will be here soon...other info will be here soon...
+            other info will be here soon...
+            other info will be here soon...other info will be here soon...
+            other info will be here soon...other info will be here soon...
+            other info will be here soon...
+            other info will be here soon...other info will be here soon...
+            other info will be here soon...
+        </p>
+    </div>
+    <embed src="media/css.pdf" type="application/PDF" height="800" width="600">
+
+
+    <div class="gridBox" id="bottomLeftBox">
+        <center><h2>Frustrations</h2></center>
+        <p>some research to find out ll be here soon...other info will be here soon...
+            other info will be here soon...
+            other info will be here soon...other info will be here soon...
+            other info will be here soon...</p>
+    </div>
+
+    <div id="soccer">
+    <details>
+        <summary>My favorite soccer teams</summary>
+        <ul>
+            <li>Barcelona</li>
+            <li>Chelsea</li>
+            <li>Milan</li>
+        </ul>
+      </details>
+    </div>
+</main>
+</body>

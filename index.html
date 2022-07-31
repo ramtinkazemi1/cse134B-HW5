@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>person</title>
+
+    <style>
+
+        @media (max-width: 800px) {
+            .navBar{
+            flex-direction: column;}
+        }
+
+        @media (max-height: 70px) {
+            .navBar{
+            flex-direction: row;}
+        }
+
+        body{
+            background-color: rgba(255, 166, 0, 0.234);
+        }
+
+        header{
+            background-color: rgba(137, 43, 226, 0.782);
+            border: 2px solid #000;
+            height: 55px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #h3{
+            color: rgb(0, 0, 0);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 20px;
+            width: fit-content;
+        }
+        #personPic{
+            justify-content: center;
+            left: 45%;
+            height: auto;
+        }
+        .navBar{
+            background-color: rgba(137, 43, 226, 0.782);
+            width: max-content;
+            height: max-content;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: 1px solid black;
+            list-style-type: none;
+            text-align: left;
+            display: block;
+            line-height: 15px;
+            padding: 10px;
+            width: 10%;
+            padding-right: 120px;
+            margin-right: 10px;
+            position: absolute;
+            right: 10px;
+            left: 77.5%;
+            top: 120px;
+        }
+        #navOpt a {
+            display: block;
+            border-bottom: 1px solid black;
+            font-size: larger;
+            color: #000;
+            padding: 8px 0px;
+            text-decoration-line: none;
+          }
+
+          #navOpt a:hover:not(.active) {
+            background-color: rgba(236, 201, 238, 0.804);
+            color: solid black;
+            font-weight: bolder;
+        }
+
+        #infoBox{
+            box-sizing: border-box;
+            display: grid;
+            border-style: solid;
+            border-width: 1px;
+            border-color: blueviolet;
+            background-color: transparent;
+            font-family: fantasy;
+            width: fit-content;
+            padding: 3px;
+            font-size: 15px;
+            width: 25%;
+            position: absolute;
+            left: 10px;
+            top: 130px;
+        }
+
+        #edParagraph{
+            box-sizing: border-box;
+            display: grid;
+            border-style: solid;
+            border-width: 1px;
+            border-color: blueviolet;
+            background-color: transparent;
+            font-family: fantasy;
+            width: fit-content;
+            height: max-content;
+            padding: 3px;
+            font-size: 15px;
+            width: 40%;
+            margin: 0 , auto;
+            position: absolute;
+            /*top: 370px;*/
+            top: 50%;
+            left: 30%;
+        }
+
+        .meter {
+            height: 2px;
+            position: relative;
+            background: rgba(96, 96, 96, 0.258);
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            padding-bottom: 7px;
+            padding-top: 3px;
+            width: 95%;
+        }
+        .meter > span {
+            display: block;
+            height: fit-content;
+            height: 270%;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-color: blueviolet;
+            position: relative;
+            overflow: hidden;
+          }
+
+          #skillDiv{
+            box-sizing: border-box;
+            display: grid;
+            border-style: solid;
+            border-width: 1px;
+            border-color: blueviolet;
+            background-color: transparent;
+            font-family: fantasy;
+            width: fit-content;
+            padding: 3px;
+            font-size: 15px;
+            width: 25%;
+            position: absolute;
+            left: 10px;
+            top: 550px;
+          }
+          #concernDiv{
+            box-sizing: border-box;
+            display: grid;
+            border-style: solid;
+            border-width: 1px;
+            border-color: blueviolet;
+            background-color: transparent;
+            font-family: fantasy;
+            width: fit-content;
+            padding: 3px;
+            font-size: 15px;
+            width: 25%;
+            position: absolute;
+            right: 10px;
+            top: 550px;
+          }
+          #footer{
+            position:relative;
+            bottom:0px;
+            display: flex;
+            justify-content: center;
+          }
+    </style>
+
+ </head>
+<!--  link, template,-->
+
+
+<body>
+    <header>
+        <center><h3 id="h3"><b>person</b></h3></center>
+    </header><br><br>
+
+    <main>
+        <center>
+            <img id="personPic" src="Media/ax.png" alt="person" width="150" height="150">
+        </center>
+
+        <section>
+            <ul class="navBar">
+                <li id="navOpt"><a href="Biography.html">Biography</a>&nbsp;</li>
+                <li id="navOpt"><a href="Experiences.html">Projects</a>&nbsp;</li>
+                <li id="navOpt"><a href="Photographs.html">Photographs</a>&nbsp;</li>
+                <li id="navOpt"><a href="ContactMe.html">Contact Me</a></li>
+                <li id="navOpt"><a href="webcomponent.html">hw5 PART2</a></li>
+                </ul>
+        </section>
+
+        <aside>
+            <div id="infoBox">
+                <ul>
+                    <li>Age: <b>24</b></li>
+                    <li>Job: <b>Software Engineer</b></li>
+                    <li>Status: <b>Single</b></li>
+                    <li>Location: <b>San Diego, CA</b></li>
+                    <li>Character: <b>Self-Reliant</b></li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <br />
+        <br />
+
+
+        <div id="edParagraph">
+            <center><h3>Education</h3></center>
+            <em>University</em><br>CA<br>
+                Bachelor of Science in Computer Science<br><hr>
+                <b>Expected graduation:</b> June 2023<br><hr>
+                <b>Coursework:</b> CSE110(Software Engineering),
+                 CSE100(Advanced data structures in C++),
+                 CSE101(Design & Analysis of Algorithm),
+                 COGS108(Data Science in practice using Python),
+                 CSE12(Data structures in Java), CSE30(Software tools in C, Assembly, Linux)
+                </p>
+        </div>
+
+        <div id="skillDiv">
+            <center><caption><b>Skills</b></caption></center><br>
+            <hr color="white">
+            <caption>JAVA</caption><br>
+            <div class="meter">
+                <span style="width: 88%"></span><br></div><br>
+            <caption>PYTHON</caption>
+            <div class="meter">
+
+                <span style="width: 75%"></span><br></div><br>
+            <caption>C++</caption>
+            <div class="meter">
+
+                <span style="width: 60%"></span><br></div><br>
+            <caption>C</caption>
+            <div class="meter">
+
+                <span style="width: 50%"></span><br></div>
+        </div><br>
+
+        <div id="concernDiv">
+            <center><caption><b>Concerns</b></caption></center><br>
+            <hr color="white">
+            <caption>Getting an Internship</caption>
+            <div class="meter">
+
+                <span style="width: 97%"></span><br></div><br>
+            <caption>Fulfilling the degree audit</caption>
+            <div class="meter">
+
+                <span style="width: 40%"></span><br></div><br>
+            <caption>Referrals</caption>
+            <div class="meter">
+
+                <span style="width: 60%"></span><br></div><br>
+            <caption>Summer Fun</caption>
+            <div class="meter">
+
+                <span style="width: 90%"></span><br></div>
+        </div>
+
+    </main><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <footer id="footer">
+        <center>Author: person<br>
+        <a href="mailto:ramkazemi@yahoo.com">Send an Email to person</a></center>
+      </footer>
+</body>
+
+</html>

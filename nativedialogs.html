@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="DOMPurify-main/dist/purify.js"></script>
+        <title>Nav Dialogue</title>
+        <style>
+        </style>
+    </head>
+
+<body>
+    <h1><b>Simple Dialogs?</b></h1>
+    <button id="alertBtn">Alert</button>
+    <button id="confirmBtn">Confirm</button>
+    <button id="promptBtn">Prompt</button>
+    <button id="saferPromptBtn">Safer Prompt</button>
+    <hr>
+    <output id="output1"></output>
+    <output id="output2"></output>
+    <output id="output3"></output>
+    <br>
+    <canvas id="myCanvas" style="border:5px solid black; border-style:double">campus:)</canvas>
+
+    <script>
+
+        document.getElementById("alertBtn").addEventListener("click",()=>{alert("alert is here!")});
+
+        document.getElementById("confirmBtn").addEventListener("click",function(){
+            let bool =  confirm("Yes to confirm?")
+            document.getElementById("output1").textContent = `The value returned by the confirm method is : ${bool}`
+            opt_elem.style.display = "initial";
+            document.getElementById("output2").style.display = "none";
+            document.getElementById("output3").style.display = "none";
+        })
+
+
+        document.getElementById("promptBtn").addEventListener("click",function(){
+            let inputName = prompt("What is your name?")
+            let opt2_elem = document.getElementById("output2")
+            if(inputName != null && inputName != ""){opt2_elem.innerHTML = `Prompt result: ${inputName}`;}
+            else{
+                opt2_elem.innerHTML = "User didn't enter anything"
+            }
+            opt2_elem.style.display = "initial";
+            document.getElementById("output1").style.display = "none";
+            document.getElementById("output3").style.display = "none";
+        })
+
+
+        document.getElementById("saferPromptBtn").addEventListener("click",function(){
+            let safeName = prompt("What is your name?")
+            let opt3_elem = document.getElementById("output3")
+            if(safeName != null && safeName != ""){
+                let clean = DOMPurify.sanitize(safeName)
+                opt3_elem.innerHTML = `Safer Prompt result: ${clean}`
+            }
+            else{
+                opt3_elem.innerText = "User didn't enter anything"
+            }
+            opt3_elem.style.display = "initial";
+            document.getElementById("output1").style.display = "none";
+            document.getElementById("output2").style.display = "none";
+        })
+
+
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("My Favorites :)",10,50);
+    </script>
+</body>
+
+</html>

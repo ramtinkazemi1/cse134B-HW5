@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ramtin kazemi CRUD page</title>
+    <script type="text/javascript" src="DOMPurify-main/dist/purify.js"></script>
+    <script type="module" src="/blog.js"></script>
+
+    <template id="postDiv">
+        <center><div class="tempDiv" data-id="">
+            <fieldset>
+            <caption style="text-decoration:underline;">Beginning of the blogs...</caption>
+            <h1 id="postH1">Title</h1>
+            <p id="Date" style="color: red;">Date</p>
+            <p id="Summary">Message</p>
+            <button id="editBtn">Edit</button>
+            <button id="deleteBtn">Delete</button>
+            <button id ="saveBtn">Save</button>
+        </fieldset>
+        </div></center>
+    </template>
+    <style>
+        body{
+            background-color: rgb(244, 244, 204);
+        }
+        #blogDialog{
+            background-color: bisque;
+            border-radius: 25%;
+            border-color: aqua;
+        }
+        .button {
+            background-color:#0a0a23;
+            color: #fff;
+            border:none;
+            border-radius:10px;
+          }
+          .button1 {
+            background-color:#0a0a23;
+            color: #fff;
+            border: none;
+            border-radius:5px;
+
+          }
+
+    </style>
+</head>
+<body>
+    <main>
+        <center><h1>Create Read Update Delete</h1></center>
+        <center><button class="button1" id="BTN1">Add</button></center>
+        <section id="postSection"></section>
+        <dialog id="blogDialog">
+            <form id="inputForm" action="">
+                    <label for="title">Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="title"><br><br>
+                    <label for="summary">Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input name="summary" rows="3"></input><br><br>
+                    <label for="date">Select Date&nbsp;&nbsp;</label>
+                    <input type="date" name="date"><br><br>
+                    <center><input class="button" type="submit" value="Add Now!"></center>
+            </form>
+        </dialog>
+    </main>
+</body>
+</html>
