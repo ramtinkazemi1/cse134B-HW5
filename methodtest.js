@@ -1,19 +1,19 @@
 
 window.addEventListener(`DOMContentLoaded`, init);
 function init(){
-    document.getElementById("bt2").addEventListener("click",requestGet);
-    document.getElementById("bt1").addEventListener("click",requestPost);
-    document.getElementById("bt3").addEventListener("click",requestPut);
-    document.getElementById("bt4").addEventListener("click",requestDelete);
+    document.getElementById("bt2").addEventListener("click",getFunc);
+    document.getElementById("bt1").addEventListener("click",postFunc);
+    document.getElementById("bt3").addEventListener("click",putFunc);
+    document.getElementById("bt4").addEventListener("click",deleteFunc);
     const today = new Date();
     console.log(`Initialized at ${today}`);
 
 }
 
-export function requestGet() {
+export function getFunc() {
 
     const temp = new FormData(document.getElementById("test_form"));
-    const xhr = new XMLHttpRequest(); 
+    const xhr = new XMLHttpRequest();
     xhr.onload = function(){
         document.getElementById("response").innerHTML = JSON.stringify(JSON.parse(xhr.responseText), null, 4);
     }
@@ -22,7 +22,7 @@ export function requestGet() {
 }
 
 
-export function requestPost(){
+export function postFunc(){
     console.log(`time to post`);
     const temp = new FormData(document.getElementById("test_form"));
     const xhr = new XMLHttpRequest();
@@ -34,7 +34,7 @@ export function requestPost(){
     xhr.send(temp);
 }
 
-export function requestPut(){
+export function putFunc(){
     console.log(`time to put`);
     const temp = new FormData(document.getElementById("test_form"));
     const xhr = new XMLHttpRequest();
@@ -46,8 +46,8 @@ export function requestPut(){
     xhr.send(temp);
 }
 
-export function requestDelete(){
-    console.log(`time to delete`);  
+export function deleteFunc(){
+    console.log(`time to delete`);
     const temp = new FormData(document.getElementById("test_form"));
     const xhr = new XMLHttpRequest();
 
