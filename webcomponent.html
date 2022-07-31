@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ramtin HW5 part2</title>
+    <script type="module" src="/ButtonCount.js"></script>
     <style>
 
         :root {
@@ -12,51 +13,61 @@
         button-count:not(:defined) {
             display : none;
         }
+        body{
+            background-color: antiquewhite;
+        }
+        .navBar{
+            background-color: rgba(137, 43, 226, 0.782);
+            width: max-content;
+            height: max-content;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: 1px solid black;
+            list-style-type: none;
+            text-align: left;
+            display: block;
+            line-height: 15px;
+            padding: 10px;
+            width: 10%;
+            padding-right: 120px;
+            margin-right: 10px;
+            position: absolute;
+            right: 10px;
+            left: 77.5%;
+            top: 120px;
+        }
+        #navOpt a {
+            display: block;
+            border-bottom: 1px solid black;
+            font-size: larger;
+            color: #000;
+            padding: 8px 0px;
+            text-decoration-line: none;
+          }
+
+          #navOpt a:hover:not(.active) {
+            background-color: rgba(236, 201, 238, 0.804);
+            color: solid black;
+            font-weight: bolder;
+        }
     </style>
 </head>
 <body>
 
 
-<h1>Ahoy Custom Elements Below</h1>
+<center><h1 style="color: red;">Custom Elements Below</h1></center>
 <hr>
+<main>
+    <section>
+        <ul class="navBar">
+            <li id="navOpt"><a href="Biography.html">Biography</a>&nbsp;</li>
+            <li id="navOpt"><a href="Experiences.html">Projects</a>&nbsp;</li>
+            <li id="navOpt"><a href="Photographs.html">Photographs</a>&nbsp;</li>
+            <li id="navOpt"><a href="ContactMe.html">Contact Me</a></li>
+            <li id="navOpt"><a href="webcomponent.html">hw5 PART2</a></li>
+            </ul>
+    </section>
+    <button-count><b> </b></button-count>
+</main>
 
-<!-- what happens with no JS? -->
-<button-count><b>Where did this go?</b></button-count>
-
-<script type="module">
-    class ButtonCount extends HTMLElement {
-
-        // <style> output {color: red;} button {background: green;} </style>
-        constructor() {
-            super();
-
-            // multiple ways we could do things from direct DOM methods here, to template tags you clone, to template strings you instantiate - all have their place, but this is direct and easy
-
-            // Create a button element
-            let btn = document.createElement('button');
-            btn.innerHTML = 'Times Clicked : ';
-
-            let count = document.createElement('output');
-            count.textContent = 0;
-
-            btn.append(count);
-            // add the slot in
-            let slot = document.createElement('slot');
-            btn.append(slot);
-
-            // Update the count when the button is clicked
-            btn.addEventListener('click', () => {
-                let currVal = Number(count.textContent);
-                count.textContent = currVal + 1;
-            });
-            // Attach and open up shadow tree and add the button to it
-            this.attachShadow({ mode: 'open' });
-            this.shadowRoot.append(btn);
-        }
-    }
-
-    // Define the custom element in the registry
-    customElements.define('button-count', ButtonCount);
-</script>
 </body>
 </html>
