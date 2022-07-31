@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>HW5 PART1</title>
+    <script type="module" src="/methodtest.js"></script>
     <style>
         body{
             background-color: antiquewhite;
@@ -11,45 +12,45 @@
 
 </head>
 <body>
-​
+
 <form action="https://www.httpbin.org/post" method="post" target="response_frame" id="test_form">
-​
+
     <div>
         <label for="user_name">ID: </label>
         <input type="text" name="NAME" id="user_name">
     </div>
-​
+
     <div>
         <label for="user_pass">NAME: </label>
         <input type="text" name="user_pass" id="user_pass">
     </div><br>
 
     <textarea rows = "9" cols = "30">Text Area</textarea><br><br>
-​
+
     <div>
-        <button type="submit">POST</button>
-        <button type="submit">GET</button>
-        <button type="submit">PUT</button>
-        <button type="submit">DELETE</button>
+        <button id="bt1" type="submit">POST</button>
+        <button id="bt2" type="submit">GET</button>
+        <button id="bt3" type="submit">PUT</button>
+        <button id="bt4" type="submit">DELETE</button>
     </div>
-​
+
     <fieldset>
         <legend>Server Response</legend>
-​
+
         <output id="response"></output>
         <noscript>
             <iframe id="response_frame" name="response_frame"></iframe>
         </noscript>
-​
+
     </fieldset>
-​
+
 </form>
-​
+
 <script type="module">
-​
-​
+
+
     window.addEventListener('DOMContentLoaded',init);
-​
+
     /**
      * init - bind DOM properties, read defaults, and set-up for execution
      */

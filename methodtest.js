@@ -1,18 +1,18 @@
 
 window.addEventListener(`DOMContentLoaded`, init);
 function init(){
-    document.getElementById("getBtn").addEventListener("click",requestGet);
-    document.getElementById("postBtn").addEventListener("click",requestPost);
-    document.getElementById("putBtn").addEventListener("click",requestPut);
-    document.getElementById("deleteBtn").addEventListener("click",requestDelete);
+    document.getElementById("bt2").addEventListener("click",requestGet);
+    document.getElementById("bt1").addEventListener("click",requestPost);
+    document.getElementById("bt3").addEventListener("click",requestPut);
+    document.getElementById("bt4").addEventListener("click",requestDelete);
     const today = new Date();
     console.log(`Initialized at ${today}`);
 
 }
 
 export function requestGet() {
-    console.log(`time to get`);  
-    const temp = new FormData(document.getElementById("act"));
+
+    const temp = new FormData(document.getElementById("test_form"));
     const xhr = new XMLHttpRequest(); 
     xhr.onload = function(){
         document.getElementById("response").innerHTML = JSON.stringify(JSON.parse(xhr.responseText), null, 4);
@@ -23,12 +23,11 @@ export function requestGet() {
 
 
 export function requestPost(){
-    console.log(`time to post`);  
-    const temp = new FormData(document.getElementById("act"));
+    console.log(`time to post`);
+    const temp = new FormData(document.getElementById("test_form"));
     const xhr = new XMLHttpRequest();
 
     xhr.onload = function() {
-        
         document.getElementById("response").innerHTML = JSON.stringify(JSON.parse(xhr.responseText), null, 4);
     }
     xhr.open("POST", "https://httpbin.org/post");
@@ -36,8 +35,8 @@ export function requestPost(){
 }
 
 export function requestPut(){
-    console.log(`time to put`);  
-    const temp = new FormData(document.getElementById("act"));
+    console.log(`time to put`);
+    const temp = new FormData(document.getElementById("test_form"));
     const xhr = new XMLHttpRequest();
 
     xhr.onload = function() {
@@ -49,7 +48,7 @@ export function requestPut(){
 
 export function requestDelete(){
     console.log(`time to delete`);  
-    const temp = new FormData(document.getElementById("act"));
+    const temp = new FormData(document.getElementById("test_form"));
     const xhr = new XMLHttpRequest();
 
     xhr.onload = function() {
