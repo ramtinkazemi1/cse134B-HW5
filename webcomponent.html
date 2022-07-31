@@ -5,10 +5,17 @@
     <title>Web Components #1</title>
     <style>
 ​
+        /*
+          In theory passing in variables via CSS to the component is an idea beside using standard attributes (standard or data-*) you might define on a tag since WCs are just HTML elements
+         */
         :root {
             --button-count-color : red;
         }
-
+        /*
+          simple example of using CSS to deal with custom elements before definition
+​
+           You also can reserve space, add a loader, or other concerns if you like
+         */
         button-count:not(:defined) {
             display : none;
         }
@@ -24,6 +31,21 @@
 <button-count><b>Where did this go?</b></button-count>
 ​
 <script type="module">
+    /*
+      CSS use to help WCs + showing basic ideas of graceful degradation
+      TODO: add in a pulser script in CSS to show loader
+      TODO: use a setTimeout to register the component to simulate a slow load
+      TODO: CSS to transition out
+​
+      Starting to point at the possibility of progressive enhancement even with JS heavy ideas
+      TODO: use the slot element to show its use
+      TODO: explore the use of is attribute and extending other element types
+      TODO: Reflect state into attributes esp data- ones like data-count
+​
+      Making sure to address more complexity with WCs and understand element lifecycle
+      TODO: Add an attribute and watch it for changes ex: color="red"
+      TODO: use template strings or <template> to show a different creational pattern
+     */
     class ButtonCount extends HTMLElement {
 ​
         // <style> output {color: red;} button {background: green;} </style>
